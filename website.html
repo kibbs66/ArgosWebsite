@@ -17,7 +17,7 @@
                 {
                     $(object.deals.items).each(function(index)
                     {
-                        document.getElementById('object'+index+"info").innerHTML = "Temperature: " + this.temperature + "<br>" + "Merchant: " + this.merchant.name + "<br>" + "Price: &pound" + this.price + "<br>" + "Competitor Price: &poundNOT IMPLEMENTED" + "<br>" + "Price Difference: &poundNOT IMPLEMENTED" + "<br>" + "URL: " + this.deal_link + "<br>" + "Image URL: " + this.deal_image + "<br>" + "Description" + this.description + "<br>"+ "<br>";
+                        document.getElementById('object'+index+"info").innerHTML = "Temperature: " + this.temperature + "<br>" + "Merchant: " + this.merchant.name + "<br>" + "Price: &pound " + this.price + "<br>" + "Competitor Price: &pound NOT IMPLEMENTED" + "<br>" + "Price Difference: &pound NOT IMPLEMENTED" + "<br>" + "URL: " + this.deal_link + "<br>" + "Image URL: " + this.deal_image + "<br>" + "Description" + this.description + "<br>"+ "<br>";
                         hotdeals.push(this);
                         hotdeals.push(this.deal_image);
                     });   
