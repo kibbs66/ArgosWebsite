@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Argos Graduate Exercise</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet old.css">
+</head>
+<body>
+            <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script>
+            
+            var items = [];
+            $.ajax({
+                type: 'GET',
+                url: "http://api.hotukdeals.com/rest_api/v2/?key=601163ba065df7af862f99a8f1da9852&output=json&merchant=argos&sort_results_by=temperature_rating&sort_results_by=temperature_rating&results_per_page=10",
+                success: function(object)
+
+                {
+                    $(object.deals.items).each(function(index)
+                    {
+                        document.getElementById('object'+index+"info").innerHTML = "Temperature: " + this.temperature + "<br>" + "Merchant: " + this.merchant.name + "<br>" + "Price: " + this.price + "<br>" + "URL: " + this.deal_link + "<br>" + "Description" + this.description + "<br>"+ "<br>";
+                        items.push(this);
+                        console.log(items);
+                    });   
+                }
+            });
+        </script>
+    
+        <div id="wrapper"> 
+        </div>
+                <div id="fixed-bar-top"></div>
+  		<div class="top-bar" data-topbar role="navigationBar">
+
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Find Us</a></li>
+                    <li><a href="#">More Deals</a></li>
+                    <li><a href="#">Home</a></li> 
+                </ul>
+				
+		<div class="logo">
+		  <img src="../images/Argos_Logo.png" width = "160" height = "80" />
+		</div>
+		
+                    <div class="icon">
+                        <a href="#"><img src="../images/facebook_icon.png" alt="facebook" width = "30" height = "30" /></a>
+                        <a href="#"><img src="../images/google_icon.png" alt="google" width = "30" height = "30" /></a>
+                        <a href="#"><img src="../images/instagram_icon.png" alt="instagram"  width = "30" height = "30" /></a>
+                        <a href="#"><img src="../images/twitter_icon.png" alt="twitter"  width = "30" height = "30" /></a>
+                        <a href="#"><img src="../images/youtube_icon.png" alt="youtube"  width = "30" height = "30" /></a>                   
+                    </div>
+                    
+                    <div class="title">	<H1> Argos Comparison</H1>   </div>
+		</div>
+
+
+
+        <div id="info"></div>
+            <div id="object0info"> </div>
+            <div id="object1info"> </div>
+            <div id="object2info"> </div>
+            <div id="object3info"> </div>
+            <div id="object4info"> </div>
+            <div id="object5info"> </div>
+            <div id="object6info"> </div>
+            <div id="object7info"> </div>
+            <div id="object8info"> </div>
+            <div id="object9info"> </div>
+            
+                <div class="block"> Item 2</div>
+                <div class="block"> Item 3</div>
+     
+
+        <div id="fixed-bar-bottom"></div>
+                <div class ="QR-img">
+            <img src="../images/QR_Code.jpg" Alt="Luke Kibble QR Code"  width = "120" height = "120"/>
+        </div>
+        <div class="QR">
+            Visit my LinkedIn <a href="https://uk.linkedin.com/in/lukekibble">here</a> 
+        </div>
+        
+</body>
+</html>	
